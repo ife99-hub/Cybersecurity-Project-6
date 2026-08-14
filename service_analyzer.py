@@ -11,15 +11,14 @@ def describe_port(port, service, status):
     else:
         assessment = "No immediate exposure detected"
     return assessment
-port = 22
-service = "SSH"
-status = "open"
-
+port = int(input("Enter port number:"))
+service = input("Enter the name of service (e.g. SSH, HTTP, HTTPS):").upper()
+status = input("Enter the status of the port (open/closed):").capitalize()
 
 assessment = describe_port(port, service, status)
 
-print(f"port: {port}")
-print(f"service: {service}")
-print(f"status: {status}")
+print("\n--- Security Assessment Report ---")
+print(f"Port: {port}")
+print(f"Service: {service}")
+print(f"Status: {status}")
 print(f"Assessment: {assessment}")
-
