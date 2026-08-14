@@ -1,5 +1,5 @@
 def describe_port(port, service, status):
-    if status == "open":
+    if status == "Open":
         if service == "SSH":
             assessment = "Review SSH exposure"
         elif service == "HTTP":
