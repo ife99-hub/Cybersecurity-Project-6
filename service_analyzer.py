@@ -17,15 +17,20 @@ def describe_port(port, service, status):
         risk = "None"
         assessment = "No immediate exposure detected"
     return risk, assessment
-port = int(input("Enter port number:")) 
-service = input("Enter the name of service (e.g. SSH, HTTP, HTTPS):").upper()
-status = input("Enter the status of the port (open/closed):").capitalize()
+ports = [{"port": 22, "service": "SSH", "status": "Open"},
+         {"port": 80, "service": "HTTP", "status": "Open"},
+         {"port": 443, "service": "HTTPS", "status": "Open"},
+         {"port": 23, "service": "Telnet", "status": "Open"},
+         {"port": 25, "service": "SMTP", "status": "Closed"}]
+for port_info in ports:
+    port = port_info["port"]
+    service = port_info["service"]
+    status = port_info["status"]
 
-risk, assessment = describe_port(port, service, status)
 
-print("\n--- Security Assessment Report ---")
-print(f"Port: {port}")
-print(f"Service: {service}")
-print(f"Status: {status}")
-print(f"Risk: {risk}")
-print(f"Assessment: {assessment}")
+    risk, assessment = describe_port(port, service, status)
+    print("\nPort:", port)
+    print("Service:", service)
+    print("Status:", status)
+    print("Risk:", risk)
+    print("Assessment:", assessment)
