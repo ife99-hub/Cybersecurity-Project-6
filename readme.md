@@ -223,9 +223,4 @@ Ifeoluwa Onabowale
 
 Cybersecurity Student | Aspiring Red Team / Purple Team Professional
 
-GitHub description
-
-You can use this as your repository description:
-
-A Python cybersecurity project that analyzes network ports and services, validates input, classifies security risks, and generates basic security assessments. Built as part of my Red Team and Purple Team learning journey.
 
